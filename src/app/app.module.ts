@@ -7,6 +7,9 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { StudentsListComponent } from './students-list/students-list.component';
 import { SearchStudentComponent } from './search-student/search-student.component';
 import {FormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
+import {AppRoutingModule} from './app-routing/app-routing.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,10 +19,13 @@ import {FormsModule} from '@angular/forms';
     StudentsListComponent,
     SearchStudentComponent
   ],
-    imports: [
-        BrowserModule,
-        FormsModule
-    ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    RouterModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
