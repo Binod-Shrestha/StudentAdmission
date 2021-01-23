@@ -9,18 +9,18 @@ import {StudentService} from '../student.service';
 })
 export class CreateStudentComponent implements OnInit {
   student: Student = new Student();
-  submitted: false;
+  submitted = false;
 
   constructor(private studentService: StudentService) { }
 
   ngOnInit(): void {
   }
 
-  newStudent(){
+  newStudent(): void{
     this.submitted = false;
     this.student = new Student();
   }
-  save(){
+  save(): void{
     this.studentService.createStudent(this.student).subscribe(
       data => {
         console.log(data);
@@ -29,7 +29,7 @@ export class CreateStudentComponent implements OnInit {
       );
     this.student = new Student();
   }
-  onSubmit(){
+  onSubmit(): void{
     this.submitted = true;
     this.save();
   }
