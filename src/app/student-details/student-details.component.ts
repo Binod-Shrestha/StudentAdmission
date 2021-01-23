@@ -16,7 +16,7 @@ export class StudentDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  updateActive(isActive: boolean): void {
+  updateActive(isActive: boolean) {
       this.studentService.updateStudent(this.student.id,
         {
           name: this.student.name,
@@ -29,7 +29,7 @@ export class StudentDetailsComponent implements OnInit {
         },
         error => console.log(error));
   }
-  deleteStudent(): void{
+  deleteStudent(){
       this.studentService.deleteStudent(this.student.id).subscribe(
         data => {
           console.log(data);
