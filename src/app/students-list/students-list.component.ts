@@ -16,8 +16,7 @@ export class StudentsListComponent implements OnInit {
   ngOnInit(): void {
     this.reloadData();
   }
-  // tslint:disable-next-line:typedef
-  deleteStudents(){
+  deleteStudents(): void{
     this.studentService.deleteAll().subscribe(
       data =>{
         console.log(data);
@@ -26,8 +25,7 @@ export class StudentsListComponent implements OnInit {
       error => console.log(error));
   }
 
-  // tslint:disable-next-line:typedef
-  reloadData(){
+  reloadData(): void{
     this.students = this.studentService.getStudentList();
 }
 }

@@ -6,6 +6,7 @@ import { CreateStudentComponent } from './create-student/create-student.componen
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { StudentsListComponent } from './students-list/students-list.component';
 import { SearchStudentComponent } from './search-student/search-student.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,9 +16,10 @@ import { SearchStudentComponent } from './search-student/search-student.componen
     StudentsListComponent,
     SearchStudentComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
