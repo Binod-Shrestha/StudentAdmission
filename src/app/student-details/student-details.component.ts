@@ -16,8 +16,7 @@ export class StudentDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // tslint:disable-next-line:typedef
-  updateActive(isActive: boolean){
+  updateActive(isActive: boolean): void {
       this.studentService.updateStudent(this.student.id,
         {
           name: this.student.name,
@@ -30,8 +29,7 @@ export class StudentDetailsComponent implements OnInit {
         },
         error => console.log(error));
   }
-  // tslint:disable-next-line:typedef
-  deleteStudent(){
+  deleteStudent(): void{
       this.studentService.deleteStudent(this.student.id).subscribe(
         data => {
           console.log(data);

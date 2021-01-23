@@ -16,7 +16,7 @@ export class StudentService {
   }
 
   createStudent(student: object): Observable<object>{
-    return this.http.put(`${this.baseUrl}` + `/create`, student);
+    return this.http.post(`${this.baseUrl}` + `/create`, student);
   }
 
   updateStudent(id: number, value: any): Observable<object>{

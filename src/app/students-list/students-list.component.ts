@@ -18,7 +18,7 @@ export class StudentsListComponent implements OnInit {
   }
   deleteStudents(): void{
     this.studentService.deleteAll().subscribe(
-      data =>{
+      data => {
         console.log(data);
         this.reloadData();
       },
