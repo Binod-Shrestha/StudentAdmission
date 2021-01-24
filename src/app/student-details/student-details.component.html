@@ -1,22 +1,36 @@
-<div *ngIf="student">
-  <div>
-    <label>Name: </label> {{student.name}}
-  </div>
-  <div>
-    <label>Age: </label> {{student.age}}
-  </div>
-  <div>
-    <label>Age: </label> {{student.grade}}
-  </div>
-  <div>
-    <label>Active: </label> {{student.active}}
-  </div>
+<div class="box">
+  <div *ngIf="student" >
+    <div>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-icon mat-card-avatar class="example-header-image">home</mat-icon>
+          <mat-card-title> <div>
+            <label>{{student.name}} </label>
+          </div></mat-card-title>
+          <mat-card-subtitle><div>
+            <label>Age: </label> {{student.age}}
+          </div></mat-card-subtitle>
+          <mat-card-subtitle><div>
+            <label>Grade: </label> {{student.grade}}
+          </div></mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            This is a content placeholder.
+          </p>
+        </mat-card-content>
+        <div>
+          <label>Active: </label> {{student.active}}
+        </div>
+        <mat-card-actions>
+          <button mat-raised-button color="warn"><span class="button is-small btn-primary" *ngIf='student.active' (click)='updateActive(false)'>Inactive</span></button>
+          <button mat-raised-button color="accent"><span class="button is-small btn-primary" *ngIf='!student.active' (click)='updateActive(true)'>Active</span></button>
+          <button mat-raised-button color="warn"><span class="button is-small btn-danger" (click)='deleteStudent()'>Delete</span></button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
 
-  <span class="button is-small btn-primary" *ngIf='student.active' (click)='updateActive(false)'>Inactive</span>
 
-  <span class="button is-small btn-primary" *ngIf='!student.active' (click)='updateActive(true)'>Active</span>
-
-  <span class="button is-small btn-danger" (click)='deleteStudent()'>Delete</span>
-
-  <hr/>
+  </div>
 </div>
+

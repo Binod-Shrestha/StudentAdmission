@@ -1,0 +1,9 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+nav a{
+  padding: 5pt;
+  text-decoration: none;
+  color: white;
+}
+

@@ -11,6 +11,15 @@ import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatListModule} from '@angular/material/list';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule, MatLabel} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -18,16 +27,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CreateStudentComponent,
     StudentDetailsComponent,
     StudentsListComponent,
-    SearchStudentComponent
+    SearchStudentComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule,
-    HttpClientModule,
-    RouterModule,
-    BrowserAnimationsModule
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        AppRoutingModule,
+        HttpClientModule,
+        RouterModule,
+        BrowserAnimationsModule,
+        MatListModule,
+      MatToolbarModule,
+      MatIconModule,
+      MatCardModule,
+      MatButtonModule,
+      MatFormFieldModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

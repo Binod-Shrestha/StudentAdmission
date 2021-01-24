@@ -1,18 +1,30 @@
-<h3>Find By Age</h3>
-<div style="width: 300px;">
-  <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="age">Age</label>
-      <input type="text" class="form-control" id="age" required [(ngModel)]="age" name="age">
-    </div>
 
-    <div class="btn-group">
-      <button type="submit" class="btn btn-success">Submit</button>
-    </div>
-  </form>
+<div style="width: 400px; margin: 25pt; text-align: center; margin-top: 100pt">
+  <mat-card>
+    <h3>Find By Age</h3>
+    <form (ngSubmit)="onSubmit()">
+      <table align="center">
+        <tr>
+          <td>
+            <div class="form-group">
+              <label for="age">Age </label>
+              <input matInput type="text" class="form-control" id="age" required [(ngModel)]="age" name="age" style="height: 20pt">
+            </div>
+          </td>
+          <td><div class="btn-group">
+            <button mat-raised-button color="accent" type="submit" class="btn btn-success">Submit</button>
+          </div></td>
+        </tr>
+
+      </table>
+
+    </form>
+
+
+  </mat-card>
+  <ul>
+    <li *ngFor="let student of students">
+      <h4>{{student.id}} - {{student.name}} {{student.age}} {{student.grade}}</h4>
+    </li>
+  </ul>
 </div>
-<ul>
-  <li *ngFor="let student of students">
-    <h4>{{student.id}} - {{student.name}} {{student.age}} {{student.grade}}</h4>
-  </li>
-</ul>
